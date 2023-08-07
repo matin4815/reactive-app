@@ -1,12 +1,12 @@
 CREATE TABLE people(
-                       id SERIAL NOT NULL PRIMARY KEY ,
-                       firstname VARCHAR(250),
-                       lastname VARCHAR(250),
-                       student_number integer
+    id SERIAL NOT NULL PRIMARY KEY ,
+    firstname VARCHAR(250),
+    lastname VARCHAR(250),
+    student_number integer
 );
 CREATE TABLE courses (
-                         id SERIAL PRIMARY KEY,
-                         name VARCHAR(255) NOT NULL UNIQUE
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL UNIQUE
 );
 CREATE TABLE people_courses (
     id SERIAL PRIMARY KEY,
