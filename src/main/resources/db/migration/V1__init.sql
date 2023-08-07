@@ -1,5 +1,5 @@
 CREATE TABLE people(
-    id SERIAL NOT NULL PRIMARY KEY ,
+    id SERIAL PRIMARY KEY ,
     firstname VARCHAR(250),
     lastname VARCHAR(250),
     student_number integer
