@@ -7,6 +7,7 @@ import com.me.reacticeapp.dal.repository.PeopleCoursesRepository;
 import com.me.reacticeapp.dto.CourseDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -17,6 +18,7 @@ public class CourseService {
     private final CourseRepository courseRepository;
     private final PeopleCoursesRepository peopleCoursesRepository;
 
+    @Transactional
     public Mono<Course> saveCourse(Course course) {
         return courseRepository.save(course);
     }

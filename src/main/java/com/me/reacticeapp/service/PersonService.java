@@ -3,6 +3,7 @@ package com.me.reacticeapp.service;
 import com.me.reacticeapp.dal.entity.Person;
 import com.me.reacticeapp.dal.repository.PersonRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -15,6 +16,7 @@ public class PersonService {
         this.personRepository = personRepository;
     }
 
+    @Transactional
     public Mono<Person> savePerson(Person person) {
         return personRepository.save(person);
     }
